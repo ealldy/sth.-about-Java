@@ -15,7 +15,7 @@ public class Admin(){
 
 <Controller.java>
 @Controller
-//@RequestMapping("/user/")
+
 public class UserController{
 	//TODO http://localhost:8080/objct.do?user.name=Tom&admin.name=Lucy&age=10
 

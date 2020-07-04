@@ -1,0 +1,26 @@
+关于Map的数据绑定
+<User.java>
+public class User(){
+	private String name;
+	private Integer age;
+	//构造方法
+}
+<UserListForm.java>
+public class UserMapForm(){
+	private Map<User> users;
+
+	//构造方法
+}
+
+
+<Controller.java>
+@Controller
+public class UserController{
+	//TODO http://localhost:8080/map.do?users['X'].name=Lily&users['X'].age=25&users['Y'].name=Lucy
+
+	@RequestMapping(value = "map.do")
+	@ResponseBody
+	public String map(UserMapForm userMapForm){
+		return UserMapForm.toString();
+	}
+}

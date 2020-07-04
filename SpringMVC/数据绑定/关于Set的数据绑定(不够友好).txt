@@ -1,0 +1,31 @@
+关于Set的数据绑定
+<User.java>
+public class User(){
+	private String name;
+	private Integer age;
+	//构造方法
+}
+<UserListForm.java>
+public class UserSetForm(){
+	private Set<User> users;
+	private UserSetForm(){
+		users = new LinkedHashSet<User>();
+		users.add(new User());
+		users.add(new User());
+	}
+	//构造方法
+}
+
+
+<Controller.java>
+@Controller
+
+public class UserController{
+	//TODO http://localhost:8080/set.do?users[0].name=Lily&users[20].age=25  报异常(只初始化到2)
+
+	@RequestMapping(value = "set.do")
+	@ResponseBody
+	public String set(UserSetForm userSetForm){
+		return UserSetForm.toString();
+	}
+}

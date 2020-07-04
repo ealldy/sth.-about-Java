@@ -15,7 +15,7 @@ public class UserListForm(){
 
 <Controller.java>
 @Controller
-//@RequestMapping("/user/")
+
 public class UserController{
 	//TODO http://localhost:8080/list.do?users[0].name=Lily&users[20].age=25
 
