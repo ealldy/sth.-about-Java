@@ -1,0 +1,27 @@
+关于List的数据绑定
+<User.java>
+public class User(){
+	private String name;
+	private Integer age;
+	//构造方法
+}
+<UserListForm.java>
+public class UserListForm(){
+	private List<User> users;
+
+	//构造方法
+}
+
+
+<Controller.java>
+@Controller
+//@RequestMapping("/user/")
+public class UserController{
+	//TODO http://localhost:8080/list.do?users[0].name=Lily&users[20].age=25
+
+	@RequestMapping(value = "list.do")
+	@ResponseBody
+	public String list(UserListForm userListForm){
+		return UserListForm.toString();
+	}
+}

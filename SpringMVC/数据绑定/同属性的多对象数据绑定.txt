@@ -1,14 +1,14 @@
 同属性的多对象数据绑定
 <User.java>
 public class User(){
-	String name;
-	Integer age;
+	private String name;
+	private Integer age;
 	//构造方法
 }
 <Admin.java>
 public class Admin(){
-	String name;
-	Integer age;
+	private String name;
+	private Integer age;
 	//构造方法
 }
 
