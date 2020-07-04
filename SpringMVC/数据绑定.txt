@@ -1,0 +1,37 @@
+同属性的多对象数据绑定
+<User.java>
+public class User(){
+	String name;
+	Integer age;
+	//构造方法
+}
+<Admin.java>
+public class Admin(){
+	String name;
+	Integer age;
+	//构造方法
+}
+
+
+<Controller.java>
+@Controller
+//@RequestMapping("/user/")
+public class UserController{
+	//TODO http://localhost:8080/objct.do?user.name=Tom&admin.name=Lucy&age=10
+
+	@RequestMapping(value = "object.do")
+	@ResponseBody
+	public String object(User user,Admin admin){
+		return user.toString()+" "+admin.toString();
+	}
+	//给参数名user绑定user.前缀
+	@InitBinder("user")
+	pubilc void initUser(WebDataBinder binder){
+		binder.setFieldDefaultPrefix("user.");
+	}
+	//给参数名admin绑定admin.前缀
+	@InitBinder("admin")
+	pubilc void initUser(WebDataBinder binder){
+		binder.setFieldDefaultPrefix("admin.");
+	}
+}

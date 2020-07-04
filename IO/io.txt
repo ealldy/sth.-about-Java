@@ -1,0 +1,11 @@
+IO流
+1,
+   处理纯文本数据使用字符流(Writer、Reader)  操作的单位为字符
+   处理其他数据文件使用字节流(InputStream、OutputStream) 操作单位为8位的字节
+2,
+   基于文件的输入输出流：FileInputstream、FileOutputStream、FileReader、FileWriter
+   基于内存的输入输出流：ByteArrayInputStream、ByteArrayOutputStream (ByteArray+字节流)
+   基于网络的输入输出流：SocketInputStream、SocketOutputStream (Socket+字节流)
+3,
+节点流
+处理流
