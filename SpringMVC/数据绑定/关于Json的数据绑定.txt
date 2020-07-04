@@ -1,0 +1,21 @@
+同属性的多对象数据绑定
+<User.java>
+public class User(){
+	private String name;
+	private Integer age;
+	//构造方法
+}
+
+
+<Controller.java>
+@Controller
+
+public class UserController{
+	//TODO http://localhost:8080/objct.do?user.name=Tom&admin.name=Lucy&age=10
+
+	@RequestMapping(value = "json.do")
+	@ResponseBody
+	public String object(@RequestBody User user){
+		return user.toString();
+	}
+}
