@@ -1,11 +1,18 @@
-同属性的多对象数据绑定
+关于Json的数据绑定
 <User.java>
 public class User(){
 	private String name;
 	private Integer age;
+	private ContactInfo contactInfo;
 	//构造方法
 }
+<ContactInfo.java>
+public class ContactInfo(){
+	private String address;
+	private String phone;
 
+	//构造方法
+}
 
 <Controller.java>
 @Controller
@@ -15,7 +22,23 @@ public class UserController{
 
 	@RequestMapping(value = "json.do")
 	@ResponseBody
-	public String object(@RequestBody User user){
+	public String json(@RequestBody User user){
 		return user.toString();
+	}
+}
+
+
+
+
+注意：
+在pom.xml中写入Data Mapper For Jackson的依赖
+
+写入数据：
+{
+	"name":"Jim",
+	"age":16,
+	"contactInfo":{
+		"address":"beijing",
+		"phone":"10010"
 	}
 }
