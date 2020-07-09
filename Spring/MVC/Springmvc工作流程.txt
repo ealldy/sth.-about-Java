@@ -1,0 +1,1 @@
+发起请求——>前端控制器——>HandlerMapping(->Handler)——>前端控制器——>HandlerAdapter(Handler->ModelAndView)——>前端控制器——>视图解析器(ModelAndView->视图)——>前端控制器(视图渲染)——>用户
