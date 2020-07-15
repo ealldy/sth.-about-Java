@@ -1,0 +1,15 @@
+第一种，构造注入
+需要为类生成有参构造方法
+<bean id="A" class="inittest.A">
+        <constructor-arg name="b" ref="B"/>  为A中的变量b注入B类
+</bean>
+<bean id="B" class="inittest.B"/>
+
+
+第二种，设值注入
+需要为类生成无参构造方法以及setter方法
+在A类中生成无参构造方法以及变量B的setB()
+<bean id="A" class="inittest.A">
+        <property name="b" ref="B"/>为A中的变量b注入B类
+</bean>
+<bean id="B" class="inittest.B"/>
