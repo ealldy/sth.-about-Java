@@ -1,0 +1,4 @@
+要记住使用@Autowird装配User user，要在相应的实现类@Repository("user")
+
+
+直接user = null; 这样子置空会出出错
