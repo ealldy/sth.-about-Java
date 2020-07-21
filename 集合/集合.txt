@@ -1,0 +1,24 @@
+Collection    toArray()
+List     Arraylist 重写equals
+Set     Hashset  重写equals和hashcode
+
+sieze()
+iterator()构造器
+(ArrayList)indexOf
+add  addAll(Collection<>)
+set(int location,E obejct)
+remove removeall(Collection<>)
+contains(object)
+containsAll(Collection<>)
+
+Map 
+Hashmap  重写equals和hashcode
+get
+put
+remove(key)
+size()
+isEmpty()
+keyset
+entryset
+containsKey
+containsValue
